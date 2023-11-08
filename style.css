@@ -20,7 +20,7 @@ body{
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
-    margin: 0rem 29rem;
+    margin: 0rem 30rem;
 }
 .box {
     background-color: aquamarine;
