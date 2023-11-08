@@ -17,18 +17,27 @@ function isprime(number) {
 function CreateBox(max_number) {
     for (let  i = 0;  i <= max_number;  i++) {
         let div = document.createElement('div')
-        div.className = "box"
+        div.classList.add('box') 
         div.innerHTML = i
         if (i % 2 === 0) {
             div.style.backgroundColor = "green"
+            div.classList.add("even")
         } else {
             div.style.backgroundColor = "yellow"
+            div.classList.add("odd")
         }
-        if(isprime(i)) { div.style.backgroundColor = "red" }
-        
+        if(isprime(i)) { 
+            div.style.backgroundColor = "red";
+            div.classList.remove("odd",'even');
+            div.classList.add("prime");
+        }
+        div.addEventListener('mouseover', MouseEvent)
         container.appendChild(div)
+
         
     }
     
+    
 }
+
 CreateBox(100)
